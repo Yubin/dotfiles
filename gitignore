@@ -1,0 +1,20 @@
+
+# Vim
+*.swo
+*.swp
+*.swm
+*.swn
+*.un~
+Session.vim
+
+# Maven
+target/
+
+# Node.js
+node_modules/
+
+# direnv
+.envrc
+
+# Mac OS X
+.DS_Store
