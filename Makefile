@@ -10,6 +10,7 @@ brew-install:
 	brew install wget
 	brew install direnv
 	brew install trash
+	brew install jq
 	brew install coreutils
 
 	brew install brew-cask
@@ -50,6 +51,8 @@ link:
 
 	ln -s /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app /Applications/iOS\ Simulator.app
 
+install: link brew-install cask-install gem-install vim-install
+
 unlink:
 	-unlink ~/.config/nvim/autoload
 	-unlink ~/.config/nvim/init.vim
@@ -65,8 +68,6 @@ unlink:
 	-unlink ~/.gemrc
 	-unlink ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences
 	-unlink /Applications/iOS\ Simulator.app
-
-install: link brew-install cask-install gem-install vim-install
 
 clean: unlink
 	-unlink ~/.fzf
