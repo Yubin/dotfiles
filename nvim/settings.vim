@@ -2,6 +2,7 @@
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
+let g:tmuxline_preset = 'minimal'
 
 set list lcs=trail:·,tab:▸\ ,eol:¬
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
