@@ -1,23 +1,4 @@
 
-#
-# TODO
-#
-# Handle links
-# - tpm?
-#
-# - .gemrc
-#
-# nuke brew installs
-# brew remove --force $(brew list)
-#
-# setup eclim?
-#
-# get env variable correctly
-
-# Submodules
-# - tpm
-# - nvm wrapper
-
 brew-install:
 	brew install reattach-to-user-namespace
 	brew install tmux
@@ -43,18 +24,19 @@ vim-install:
 	nvim -c 'PlugInstall' -c 'xa'
 
 link:
+	mkdir -p ~/.config/nvim/autoload
 	mkdir -p ~/.config/nvim/vim-backup
 	mkdir -p ~/.config/nvim/vim-swap
 	mkdir -p ~/.config/nvim/vim-undo
 
-	ln -s ~/.dotfiles/nvim/autoload         ~/.config/nvim/autoload
-	ln -s ~/.dotfiles/nvim/init.vim         ~/.config/nvim/init.vim
-	ln -s ~/.dotfiles/nvim/appearance.vim   ~/.config/nvim/appearance.vim
-	ln -s ~/.dotfiles/nvim/mappings.vim     ~/.config/nvim/mappings.vim
-	ln -s ~/.dotfiles/nvim/plugins.vim      ~/.config/nvim/plugins.vim
-	ln -s ~/.dotfiles/nvim/settings.vim     ~/.config/nvim/settings.vim
-	ln -s ~/.dotfiles/nvim/tmuxline.sh      ~/.config/nvim/tmuxline.sh
-	ln -s ~/.dotfiles/nvim/promptline.sh    ~/.config/nvim/promptline.sh
+	ln -s ~/.dotfiles/nvim/autoload/plug.vim    ~/.config/nvim/autoload/plug.vim
+	ln -s ~/.dotfiles/nvim/init.vim             ~/.config/nvim/init.vim
+	ln -s ~/.dotfiles/nvim/appearance.vim       ~/.config/nvim/appearance.vim
+	ln -s ~/.dotfiles/nvim/mappings.vim         ~/.config/nvim/mappings.vim
+	ln -s ~/.dotfiles/nvim/plugins.vim          ~/.config/nvim/plugins.vim
+	ln -s ~/.dotfiles/nvim/settings.vim         ~/.config/nvim/settings.vim
+	ln -s ~/.dotfiles/nvim/tmuxline.sh          ~/.config/nvim/tmuxline.sh
+	ln -s ~/.dotfiles/nvim/promptline.sh        ~/.config/nvim/promptline.sh
 
 	mkdir -p ~/.config/fish
 
@@ -91,3 +73,4 @@ unlink:
 install: link brew-install cask-install gem-install vim-install
 
 clean: unlink
+	-unlink ~/.fzf
