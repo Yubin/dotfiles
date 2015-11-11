@@ -4,11 +4,11 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
 let g:tmuxline_preset = 'minimal'
 
-set list lcs=trail:·,tab:▸\ ,eol:¬
+set list lcs=trail:·,tab:¦\ ,eol:¬
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 set background=dark
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
 set ignorecase
 set smartcase

@@ -12,12 +12,15 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
+Plug 'terryma/vim-expand-region'
+Plug 'terryma/vim-multiple-cursors'
+
 Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'osyo-manga/vim-over'
 Plug 'triglav/vim-visual-increment'
-Plug 'terryma/vim-expand-region'
 Plug 'myusuf3/numbers.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 Plug 'winresizer.vim'
 Plug 'EasyMotion'
@@ -33,7 +36,15 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
+""
 " Syntax
+""
+
+" JavaScript
 Plug 'pangloss/vim-javascript'
+" Mustache
+Plug 'mustache/vim-mustache-handlebars'
+" Less CSS
+Plug 'groenewege/vim-less'
 
 call plug#end()

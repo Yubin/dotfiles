@@ -4,10 +4,14 @@ nnoremap K :UndotreeToggle<cr>
 nnoremap S :OverCommandLine<cr>
 nnoremap Y v$hy
 
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 nnoremap <F3> :noh<CR>
 
-inoremap >> <ESC>
-nnoremap <C-p> :FZF -m --query="!node_modules !bower_components !tmp"<cr>
+inoremap << <ESC>
+nnoremap <C-p> :FZF -m<cr>
 
 vnoremap v <Plug>(expand_region_expand)
 vnoremap V <Plug>(expand_region_shrink)
