@@ -13,8 +13,8 @@ nnoremap <F3> :noh<CR>
 inoremap << <ESC>
 nnoremap <C-p> :FZF -m<cr>
 
-vnoremap v <Plug>(expand_region_expand)
-vnoremap V <Plug>(expand_region_shrink)
+vmap v <Plug>(expand_region_expand)
+vmap V <Plug>(expand_region_shrink)
 
 nnoremap W <Leader><Leader>w
 nnoremap E <Leader><Leader>e
