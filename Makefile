@@ -35,8 +35,6 @@ link:
 	ln -s ~/.dotfiles/nvim/mappings.vim         ~/.config/nvim/mappings.vim
 	ln -s ~/.dotfiles/nvim/plugins.vim          ~/.config/nvim/plugins.vim
 	ln -s ~/.dotfiles/nvim/settings.vim         ~/.config/nvim/settings.vim
-	ln -s ~/.dotfiles/nvim/tmuxline.sh          ~/.config/nvim/tmuxline.sh
-	ln -s ~/.dotfiles/nvim/promptline.sh        ~/.config/nvim/promptline.sh
 
 	mkdir -p ~/.config/fish
 
@@ -59,8 +57,6 @@ unlink:
 	-unlink ~/.config/nvim/mappings.vim
 	-unlink ~/.config/nvim/plugins.vim
 	-unlink ~/.config/nvim/settings.vim
-	-unlink ~/.config/nvim/tmuxline.sh
-	-unlink ~/.config/nvim/promptline.sh
 	-unlink ~/.config/fish/config.fish
 	-unlink ~/.config/fish/nvm.fish
 	-unlink ~/.editorconfig
