@@ -15,6 +15,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'scrooloose/syntastic'
 Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'osyo-manga/vim-over'
