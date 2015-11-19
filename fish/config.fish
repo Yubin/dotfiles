@@ -7,8 +7,10 @@ fish_vi_mode
 source ~/.config/fish/nvm.fish
 
 # Alias
-alias vim=nvim
-alias ll=ls -l
+alias nvim="nvim -O"
+alias vim="nvim"
+alias vi="nvim"
+alias ll="ls -l"
 
 function fish_prompt
   env FISH_VERSION=$FISH_VERSION PROMPTLINE_LAST_EXIT_CODE=$status bash ~/.dotfiles/shell/promptline.sh left
