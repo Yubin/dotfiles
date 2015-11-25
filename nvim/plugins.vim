@@ -47,5 +47,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mustache/vim-mustache-handlebars'
 " Less CSS
 Plug 'groenewege/vim-less'
+" Elixir
+Plug 'elixir-lang/vim-elixir'
 
 call plug#end()
