@@ -24,6 +24,9 @@ gem-install:
 vim-install:
 	nvim -c 'PlugInstall' -c 'xa'
 
+git-install:
+	git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+
 link:
 	mkdir -p ~/.config/nvim/autoload
 	mkdir -p ~/.config/nvim/vim-backup
@@ -51,7 +54,7 @@ link:
 
 	ln -s /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app /Applications/iOS\ Simulator.app
 
-install: link brew-install cask-install gem-install vim-install
+install: link brew-install cask-install gem-install vim-install git-install
 
 unlink:
 	-unlink ~/.config/nvim/autoload
