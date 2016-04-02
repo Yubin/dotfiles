@@ -3,6 +3,7 @@ brew-install:
 	brew install reattach-to-user-namespace
 	brew install tmux
 	brew install fish
+	brew install zsh
 	brew install neovim/neovim/neovim
 	brew install git
 	brew install tree
@@ -45,6 +46,8 @@ link:
 	ln -s ~/.dotfiles/fish/config.fish     ~/.config/fish/config.fish
 	ln -s ~/.dotfiles/fish/nvm.fish        ~/.config/fish/nvm.fish
 
+	ln -s ~/.dotfiles/zsh/rc.zsh           ~/.zshrc
+
 	ln -s ~/.dotfiles/editorconfig         ~/.editorconfig
 	ln -s ~/.dotfiles/gitconfig            ~/.gitconfig
 	ln -s ~/.dotfiles/gemrc                ~/.gemrc
@@ -59,12 +62,14 @@ install: link brew-install cask-install gem-install vim-install git-install
 unlink:
 	-unlink ~/.config/nvim/autoload
 	-unlink ~/.config/nvim/init.vim
+	-unlink ~/.config/nvim/autoload/plug.vim
 	-unlink ~/.config/nvim/appearance.vim
 	-unlink ~/.config/nvim/mappings.vim
 	-unlink ~/.config/nvim/plugins.vim
 	-unlink ~/.config/nvim/settings.vim
 	-unlink ~/.config/fish/config.fish
 	-unlink ~/.config/fish/nvm.fish
+	-unlink ~/.zshrc
 	-unlink ~/.editorconfig
 	-unlink ~/.gitconfig
 	-unlink ~/.tmux.conf
