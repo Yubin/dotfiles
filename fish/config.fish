@@ -20,4 +20,4 @@ function fish_right_prompt
   env FISH_VERSION=$FISH_VERSION PROMPTLINE_LAST_EXIT_CODE=$status bash ~/.dotfiles/shell/promptline.sh right
 end
 
-set -U fish_user_paths (find ~/.gem/ruby -type d -maxdepth 2 | grep 'bin$') ~/.fzf/bin
+set -U fish_user_paths (find ~/.gem/ruby -type d -maxdepth 2 | grep 'bin$') ~/.fzf/bin ~/.dotfiles/bin
