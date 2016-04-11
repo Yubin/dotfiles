@@ -17,3 +17,9 @@ elif [ ! $(xcode-select -p) ]; then
   xcode-select --install
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+if [ ! -f "$HOME/.ssh/id_rsa" ]; then
+  ssh-keygen -t rsa -b 4096 -C "$(whoami)@$(hostname)"
+fi
+
+ssh-add "$HOME/.ssh/id_rsa"
