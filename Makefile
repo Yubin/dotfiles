@@ -1,6 +1,11 @@
 
+OS:=$(shell uname -s)
+
 brew-install:
+ifeq ($(OS),Darwin)
 	brew install reattach-to-user-namespace
+	brew install brew-cask
+endif
 	brew install tmux
 	brew install fish
 	brew install zsh
@@ -14,10 +19,10 @@ brew-install:
 	brew install jq
 	brew install coreutils
 
-	brew install brew-cask
-
 cask-install:
+ifeq ($(OS),Darwin)
 	brew cask install iterm2
+endif
 
 gem-install:
 	gem install --user-install git-up
@@ -54,14 +59,15 @@ link:
 	ln -s ~/.dotfiles/gemrc                ~/.gemrc
 	ln -s ~/.dotfiles/tmuxconf             ~/.tmux.conf
 
+ifeq ($(OS),Darwin)
 	ln -s ~/.dotfiles/alfred               ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences
 
 	ln -s /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app /Applications/iOS\ Simulator.app
+endif
 
 install: link brew-install cask-install gem-install vim-install git-install
 
 unlink:
-	-unlink ~/.config/nvim/autoload
 	-unlink ~/.config/nvim/init.vim
 	-unlink ~/.config/nvim/autoload/plug.vim
 	-unlink ~/.config/nvim/appearance.vim
@@ -76,8 +82,10 @@ unlink:
 	-unlink ~/.gitconfig
 	-unlink ~/.tmux.conf
 	-unlink ~/.gemrc
+ifeq ($(OS),Darwin)
 	-unlink ~/Library/Application\ Support/Alfred\ 2/Alfred.alfredpreferences
 	-unlink /Applications/iOS\ Simulator.app
+endif
 
 clean: unlink
 	-unlink ~/.fzf
