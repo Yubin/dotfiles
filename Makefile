@@ -47,6 +47,7 @@ link:
 	ln -s ~/.dotfiles/fish/nvm.fish        ~/.config/fish/nvm.fish
 
 	ln -s ~/.dotfiles/zsh/rc.zsh           ~/.zshrc
+	ln -s ~/.dotfiles/bash/rc.bash         ~/.bashrc
 
 	ln -s ~/.dotfiles/editorconfig         ~/.editorconfig
 	ln -s ~/.dotfiles/gitconfig            ~/.gitconfig
@@ -70,6 +71,7 @@ unlink:
 	-unlink ~/.config/fish/config.fish
 	-unlink ~/.config/fish/nvm.fish
 	-unlink ~/.zshrc
+	-unlink ~/.bashrc
 	-unlink ~/.editorconfig
 	-unlink ~/.gitconfig
 	-unlink ~/.tmux.conf
