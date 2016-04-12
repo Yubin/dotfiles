@@ -23,3 +23,5 @@ if [ ! -f "$HOME/.ssh/id_rsa" ]; then
 fi
 
 ssh-add "$HOME/.ssh/id_rsa"
+
+git clone --recursive https://github.com/ming-codes/dotfiles.git $HOME/.dotfiles
