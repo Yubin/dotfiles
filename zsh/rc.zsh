@@ -1,16 +1,22 @@
 
+export DOTFILES=$HOME/.dotfiles
+export ZSH=$DOTFILES/zsh/oh-my-zsh
+
+plugins=(git history-substring-search vi-mode)
+
 # Raise file descriptor limit
 ulimit -n 8192
-
-source ~/.dotfiles/shell/promptline.sh
 
 alias vim="nvim"
 alias vi="nvim"
 alias ll="ls -l"
 
-export PATH=~/.dotfiles/bin:$PATH
+export PATH=$DOTFILES/bin:$PATH
 
 for ruby in `find ~/.gem/ruby -type d -maxdepth 2 | grep 'bin$'`
 do
   export PATH=$ruby:$PATH
 done
+
+source $DOTFILES/shell/promptline.sh
+source $ZSH/oh-my-zsh.sh
