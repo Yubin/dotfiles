@@ -28,8 +28,8 @@ Plug 'EasyMotion'
 Plug 'Tabmerge'
 
 " Style
-Plug 'flazz/vim-colorschemes'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'edkolev/promptline.vim'
 Plug 'NLKNguyen/papercolor-theme'

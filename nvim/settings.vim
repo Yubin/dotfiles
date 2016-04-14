@@ -14,7 +14,6 @@ let g:netrw_rmdir_cmd                           = 'trash'
 set list lcs=trail:·,tab:¦\ ,eol:¬
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-set background=dark
 set clipboard+=unnamedplus
 
 set ignorecase
