@@ -24,5 +24,7 @@ source $HOME/.nvm/nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+echo "Welcome to ZSH"
+
 # This needs to be the last line
 eval "$(direnv hook zsh)"

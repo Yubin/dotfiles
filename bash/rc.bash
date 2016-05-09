@@ -12,5 +12,7 @@ source $BASH_IT/bash_it.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+echo "Welcome to BASH"
+
 # This needs to be the last line
 eval "$(direnv hook bash)"
