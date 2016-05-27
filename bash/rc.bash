@@ -9,6 +9,7 @@ set -o vi
 
 source $DOTFILES/shell/promptline.sh
 source $BASH_IT/bash_it.sh
+source $HOME/.nvm/nvm.sh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
