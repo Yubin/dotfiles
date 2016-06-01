@@ -34,6 +34,8 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'edkolev/promptline.vim'
 Plug 'NLKNguyen/papercolor-theme'
 
+Plug 'Yggdroot/indentLine'
+
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
@@ -42,7 +44,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 ""
 
 " JavaScript
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
 " Mustache
 Plug 'mustache/vim-mustache-handlebars'
 " Less CSS

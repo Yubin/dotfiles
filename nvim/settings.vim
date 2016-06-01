@@ -2,6 +2,7 @@
 let g:airline#extensions#tabline#enabled        = 1
 let g:airline#extensions#tabline#show_buffers   = 0
 let g:airline#extensions#tabline#show_tabs      = 1
+let g:airline#extensions#tabline#tab_nr_type    = 1
 let g:airline_powerline_fonts                   = 1
 let g:airline_theme                             = 'papercolor'
 let g:tmuxline_preset                           = 'minimal'
@@ -10,6 +11,12 @@ let g:netrw_localrmdir                          = 'trash'
 let g:netrw_rm_cmd                              = 'trash'
 let g:netrw_rmf_cmd                             = 'trash'
 let g:netrw_rmdir_cmd                           = 'trash'
+
+let g:syntastic_always_populate_loc_list        = 1
+let g:syntastic_auto_loc_list                   = 0
+let g:syntastic_check_on_open                   = 1
+let g:syntastic_check_on_wq                     = 0
+let g:syntastic_javascript_checkers             = [ 'eslint' ]
 
 set list lcs=trail:·,tab:¦\ ,eol:¬
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
