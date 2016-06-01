@@ -21,3 +21,5 @@ function fish_right_prompt
 end
 
 set -U fish_user_paths (find ~/.gem/ruby -type d -maxdepth 2 | grep 'bin$') ~/.fzf/bin ~/.dotfiles/bin
+
+eval (direnv hook fish)
