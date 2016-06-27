@@ -67,3 +67,7 @@ autostash = true
 
 [credential]
 helper = osxkeychain
+[format]
+pretty = oneline
+[log]
+abbrevCommit = true
