@@ -89,3 +89,23 @@ endif
 
 clean: unlink
 	-unlink ~/.fzf
+
+update:
+	sh ./zsh/oh-my-zsh/tools/upgrade.sh
+	brew update
+ifeq ($(OS),Darwin)
+	-brew upgrade reattach-to-user-namespace
+	-brew upgrade brew-cask
+endif
+	-brew upgrade tmux
+	-brew upgrade fish
+	-brew upgrade zsh
+	-brew upgrade neovim/neovim/neovim
+	-brew upgrade git
+	-brew upgrade tree
+	-brew upgrade ack
+	-brew upgrade wget
+	-brew upgrade direnv
+	-brew upgrade trash
+	-brew upgrade jq
+	-brew upgrade coreutils
